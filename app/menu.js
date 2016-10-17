@@ -22,7 +22,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Preferences...',
-        accelerator: 'Cmd+,',
+        // accelerator: 'Cmd+,',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('preferences');
@@ -64,14 +64,14 @@ module.exports = ({createWindow, updatePlugins}) => {
     submenu: [
       {
         label: 'New Window',
-        accelerator: 'CmdOrCtrl+N',
+        // accelerator: 'CmdOrCtrl+N',
         click() {
           createWindow();
         }
       },
       {
         label: 'New Tab',
-        accelerator: 'CmdOrCtrl+T',
+        // accelerator: 'CmdOrCtrl+T',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('termgroup add req');
@@ -85,7 +85,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Split Vertically',
-        accelerator: isMac ? 'Cmd+D' : 'Ctrl+Shift+E',
+        // accelerator: isMac ? 'Cmd+D' : 'Ctrl+Shift+E',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('split request vertical');
@@ -94,7 +94,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Split Horizontally',
-        accelerator: isMac ? 'Cmd+Shift+D' : 'Ctrl+Shift+O',
+        // accelerator: isMac ? 'Cmd+Shift+D' : 'Ctrl+Shift+O',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('split request horizontal');
@@ -106,7 +106,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Close',
-        accelerator: 'CmdOrCtrl+W',
+        // accelerator: 'CmdOrCtrl+W',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('termgroup close req');
@@ -116,7 +116,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       {
         label: isMac ? 'Close Terminal Window' : 'Quit',
         role: 'close',
-        accelerator: 'CmdOrCtrl+Shift+W'
+        // accelerator: 'CmdOrCtrl+Shift+W'
       }
     ]
   };
@@ -150,7 +150,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Clear',
-        accelerator: 'CmdOrCtrl+K',
+        // accelerator: 'CmdOrCtrl+K',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('session clear req');
@@ -165,7 +165,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       {type: 'separator'},
       {
         label: 'Preferences...',
-        accelerator: 'Cmd+,',
+        // accelerator: 'Cmd+,',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('preferences');
@@ -182,7 +182,7 @@ module.exports = ({createWindow, updatePlugins}) => {
     submenu: [
       {
         label: 'Reload',
-        accelerator: 'CmdOrCtrl+R',
+        // accelerator: 'CmdOrCtrl+R',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('reload');
@@ -191,7 +191,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Full Reload',
-        accelerator: 'CmdOrCtrl+Shift+R',
+        // accelerator: 'CmdOrCtrl+Shift+R',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.reload();
@@ -200,7 +200,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Toggle Developer Tools',
-        accelerator: isMac ? 'Alt+Command+I' : 'Ctrl+Shift+I',
+        // accelerator: isMac ? 'Alt+Command+I' : 'Ctrl+Shift+I',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.webContents.toggleDevTools();
@@ -212,7 +212,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Reset Zoom Level',
-        accelerator: 'CmdOrCtrl+0',
+        // accelerator: 'CmdOrCtrl+0',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('reset fontSize req');
@@ -221,7 +221,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Zoom In',
-        accelerator: 'CmdOrCtrl+plus',
+        // accelerator: 'CmdOrCtrl+plus',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('increase fontSize req');
@@ -230,7 +230,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Zoom Out',
-        accelerator: 'CmdOrCtrl+-',
+        // accelerator: 'CmdOrCtrl+-',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('decrease fontSize req');
@@ -245,7 +245,7 @@ module.exports = ({createWindow, updatePlugins}) => {
     submenu: [
       {
         label: 'Update All Now',
-        accelerator: 'CmdOrCtrl+Shift+U',
+        // accelerator: 'CmdOrCtrl+Shift+U',
         click() {
           updatePlugins();
         }
@@ -268,7 +268,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Show Previous Tab',
-        accelerator: 'CmdOrCtrl+Option+Left',
+        // accelerator: 'CmdOrCtrl+Option+Left',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('move left req');
@@ -277,7 +277,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Show Next Tab',
-        accelerator: 'CmdOrCtrl+Option+Right',
+        // accelerator: 'CmdOrCtrl+Option+Right',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('move right req');
@@ -289,7 +289,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Select Next Pane',
-        accelerator: 'Ctrl+Alt+Tab',
+        // accelerator: 'Ctrl+Alt+Tab',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('next pane req');
@@ -298,7 +298,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Select Previous Pane',
-        accelerator: 'Ctrl+Shift+Alt+Tab',
+        // accelerator: 'Ctrl+Shift+Alt+Tab',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('prev pane req');
