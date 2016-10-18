@@ -71,7 +71,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'New Tab',
-        // accelerator: 'CmdOrCtrl+T',
+        accelerator: 'CmdOrCtrl+T',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('termgroup add req');
@@ -85,7 +85,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Split Vertically',
-        // accelerator: isMac ? 'Cmd+D' : 'Ctrl+Shift+E',
+        accelerator: isMac ? 'Cmd+D' : 'Ctrl+Shift+E',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('split request vertical');
@@ -94,7 +94,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Split Horizontally',
-        // accelerator: isMac ? 'Cmd+Shift+D' : 'Ctrl+Shift+O',
+        accelerator: isMac ? 'Cmd+Shift+D' : 'Ctrl+Shift+O',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.rpc.emit('split request horizontal');
@@ -191,7 +191,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Full Reload',
-        // accelerator: 'CmdOrCtrl+Shift+R',
+        accelerator: 'CmdOrCtrl+Shift+R',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.reload();
@@ -200,7 +200,7 @@ module.exports = ({createWindow, updatePlugins}) => {
       },
       {
         label: 'Toggle Developer Tools',
-        // accelerator: isMac ? 'Alt+Command+I' : 'Ctrl+Shift+I',
+        accelerator: isMac ? 'Alt+Command+I' : 'Ctrl+Shift+I',
         click(item, focusedWindow) {
           if (focusedWindow) {
             focusedWindow.webContents.toggleDevTools();
