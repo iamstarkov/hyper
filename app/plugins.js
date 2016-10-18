@@ -19,9 +19,9 @@ const cache = new Config();
 const path = resolve(homedir(), '.hyper_plugins');
 const localPath = resolve(homedir(), '.hyper_plugins', 'local');
 const availableExtensions = new Set([
-  'onApp', 'onWindow', 'onUnload', 'middleware',
+  'onApp', 'onWindow', 'onRendererWindow', 'onUnload', 'middleware',
   'reduceUI', 'reduceSessions', 'reduceTermGroups',
-  'decorateMenu', 'decorateTerm', 'decorateHyper',
+  'decorateMenu', 'decorateTerm', 'decorateTerms', 'decorateHyper',
   'decorateHyperTerm', // for backwards compatibility with hyperterm
   'decorateTab',
   'decorateNotification', 'decorateNotifications',
