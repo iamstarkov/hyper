@@ -35,6 +35,7 @@ class Server extends EventEmitter {
   }
 
   emit(ch, data) {
+    console.log('RPC EMIT', { ch, data });
     this.wc.send(this.id, {ch, data});
   }
 
