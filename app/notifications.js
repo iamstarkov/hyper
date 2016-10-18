@@ -35,5 +35,5 @@ module.exports = function fetchNotifications(win) {
 
     retry();
   })
-  .catch(retry);
+  // .catch(retry);
 };
